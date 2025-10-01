@@ -7,6 +7,13 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       animation: {
         shimmer: "shimmer 2s linear infinite",
@@ -20,18 +27,6 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
-      },
-      colors: {
-        list: {
-          200: "#C599FF",
-          400: "#9747FF",
-        },
-      },
-      height: {
-        header: "56px",
-      },
-      maxWidth: {
-        "8xl": "1440px",
       },
     },
   },
