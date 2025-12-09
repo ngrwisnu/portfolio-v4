@@ -148,11 +148,11 @@
   }
 
   .before-el {
-    @apply absolute -top-16 -left-16 h-[112px] w-[112px] bg-[#00FFDD] blur-3xl;
+    @apply absolute -top-16 -left-16 h-28 w-28 bg-[#00FFDD] blur-3xl;
   }
 
   .after-el {
-    @apply absolute -right-16 -bottom-16 h-[112px] w-[112px] bg-[#00FFDD] blur-3xl;
+    @apply absolute -right-16 -bottom-16 h-28 w-28 bg-[#00FFDD] blur-3xl;
   }
 
   .tooltip:before {
@@ -162,5 +162,21 @@
 
   .hide-nav {
     top: -100%;
+  }
+}
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
   }
 }
