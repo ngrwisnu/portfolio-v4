@@ -1,0 +1,26 @@
+---
+import data from "@/data/works";
+import RootLayout from "@/layouts/root-layout.astro";
+import ProjectDetails from "@/components/works/ProjectDetails.svelte";
+
+export function getStaticPaths() {
+  const pages = data.map((d) => {
+    return {
+      params: {
+        slug: d.slug,
+      },
+    };
+  });
+
+  return pages;
+}
+
+const { slug } = Astro.params;
+
+const work = data.find((d) => d.slug === slug);
+const title = work?.title;
+---
+
+<RootLayout title={`${title} - Project Details`}>
+  <ProjectDetails client:load {work} />
+</RootLayout>

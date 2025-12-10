@@ -6,7 +6,7 @@
   class="card-wrapper group relative max-h-72 w-auto min-w-[200px] shrink basis-full overflow-hidden rounded border border-[#F2F2F2] px-2 sm:basis-1/2 lg:mb-4 lg:max-w-[384px] lg:basis-1/3"
   style:background-color={bgColor}
 >
-  <a href={linkTo!}>
+  <a href={linkTo!} target="_blank">
     <img
       src={`/assets/images/${imgUrl}`}
       width={384}

@@ -4,11 +4,13 @@ import Header from "@/components/header/Header.svelte";
 import Footer from "@/components/Footer.svelte";
 import "@fontsource/inter";
 import "../styles/global.css";
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
-  <BaseHead />
+<html lang="en" class="scroll-smooth" data-theme="light">
+  <BaseHead {title} />
   <body>
     <Header client:load />
     <main class="mb-20 flex w-full flex-col items-center">

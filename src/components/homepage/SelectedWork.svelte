@@ -39,7 +39,7 @@
     class="mt-6 flex w-full items-center justify-end gap-4 text-sm font-medium"
   >
     <a href={`/works/${slug}`}>Read more</a>
-    <a href={externalLink} class="relative p-[3px]">
+    <a href={externalLink} class="relative p-[3px]" target="_blank">
       <div
         class="absolute inset-0 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500"
       ></div>
@@ -47,7 +47,7 @@
         class="group relative flex h-full w-full items-center justify-center gap-1 rounded-[6px] bg-black px-8 py-2 text-sm font-medium text-white transition duration-200 hover:bg-transparent"
       >
         Live demo
-        <Send />
+        <Send size={14} />
       </div>
     </a>
   </div>
