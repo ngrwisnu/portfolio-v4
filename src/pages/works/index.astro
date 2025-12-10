@@ -1,0 +1,41 @@
+---
+import data from "@/data/works";
+import RootLayout from "@/layouts/root-layout.astro";
+import ProjectCard from "@/components/works/ProjectCard.svelte";
+---
+
+<RootLayout>
+  <section id="works-page" class="w-full">
+    <div
+      class="container-content flex min-h-screen flex-col gap-10 py-9 max-lg:px-4 md:py-24"
+    >
+      <div
+        class="max-w-8xl flex w-full items-center justify-center text-[32px] font-bold"
+      >
+        <h2>
+          <span class="text-list-400">Side</span> Works: Exploring New Ideas & Techs
+        </h2>
+      </div>
+      <ul class="flex flex-wrap justify-evenly gap-4">
+        {
+          data
+            .map((work) => {
+              if (work.isSelected === false) {
+                return (
+                  <ProjectCard
+                    key={work.slug}
+                    title={work.title}
+                    description={work.description}
+                    linkTo={work.linkExternal}
+                    imgUrl={work.imgUrls[0]}
+                    bgColor={work.bgColor}
+                  />
+                );
+              }
+            })
+            .reverse()
+        }
+      </ul>
+    </div>
+  </section>
+</RootLayout>
