@@ -1,15 +1,11 @@
 ---
+import BaseHead from "@/components/BaseHead.astro";
 import "@fontsource/inter";
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Ngr Wisnu - Frontend Web Developer</title>
-  </head>
+  <BaseHead />
   <body>
     <main class="mb-20 flex w-full flex-col items-center">
       <slot />
