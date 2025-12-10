@@ -1,5 +1,7 @@
 ---
 import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/header/Header.svelte";
+import Footer from "@/components/Footer.svelte";
 import "@fontsource/inter";
 ---
 
@@ -7,9 +9,11 @@ import "@fontsource/inter";
 <html lang="en" class="scroll-smooth">
   <BaseHead />
   <body>
+    <Header client:load />
     <main class="mb-20 flex w-full flex-col items-center">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
 
